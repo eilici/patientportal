@@ -1,0 +1,41 @@
+CREATE TABLE doctor(
+	doctor_id INT PRIMARY KEY,
+	phone_number INT NOT NULL,
+	work_address CHAR NOT NULL,
+	work_zipcode INT NOT NULL,
+	work_state CHAR NOT NULL,
+	work_city CHAR NOT NULL
+)
+
+CREATE TABLE patient(
+	patient_id INT PRIMARY KEY,
+	name CHAR NOT NULL,
+	gender CHAR NOT NULL,
+	email CHAR NOT NULL
+)
+
+CREATE TABLE patient_billing(
+	patient_id INT PRIMARY KEY,
+	billing_address CHAR NOT NULL,
+	zipcode INT NOT NULL,
+	state CHAR NOT NULL,
+	city CHAR NOT NULL,
+	FOREIGN KEY (patient_id) REFERENCES patient(patient_id)
+)
+
+CREATE TABLE test(
+	test_id INT PRIMARY KEY,
+	patient_id INT,
+	doctor_id INT,
+	order_date DATETIME NOT NULL,
+	processed BOOL NOT NULL,
+	FOREIGN KEY (patient_id) REFERENCES patient(patient_id),
+	FOREIGN KEY (doctor_id) REFERENCES doctor(doctor_id)
+)
+
+CREATE TABLE test_details(
+	test_id INT PRIMARY KEY,
+	test_type CHAR NOT NULL,
+	test_results BOOL NOT NULL,
+	FOREIGN KEY (test_id) REFERENCES test(test_id)
+)

@@ -1,0 +1,16 @@
+deployment:
+
+required: sqlite3, python
+
+if not already installed, in terminal run pip install
+flask
+sqlite3
+pandas
+pathlin
+
+execution:
+
+in terminal:
+1. navigate to folder
+2. python app.py
+3. open localhost link
