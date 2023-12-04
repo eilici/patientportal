@@ -10,6 +10,8 @@ pathlin
 
 execution:
 
+clone repo
+
 in terminal:
 1. navigate to folder
 2. python app.py
