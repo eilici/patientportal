@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+   
+<h1> Views </h1>
+
+<p> view all doctors: </p>
+<form action="{{ url_for('get_doctors') }}">
+    <input type="submit" value="get_doctors"/>
+</form>
+<br>
+<p> view all patients (-billing info): </p>
+<form action="{{ url_for('get_patients_only') }}">
+    <input type="submit" value="get_patients_only"/>
+</form>
+<br>
+<p> view all patients (+billing info): </p>
+<form action="{{ url_for('get_patients') }}">
+    <input type="submit" value="get_patients"/>
+</form>
+<br>
+<p> view all tests: </p>
+<form action="{{ url_for('get_test_all') }}">
+    <input type="submit" value="get_test_all"/>
+</form>
+<br>
+<p> view all test status: </p>
+<form action="{{ url_for('get_test_status') }}">
+    <input type="submit" value="get_status"/>
+</form>
+<br>
+<p> view all test results: </p>
+<form action="{{ url_for('get_test_results') }}">
+    <input type="submit" value="get_test_results"/>
+</form>
+<br>
+<p> view tests by patient id: </p>
+<form action="{{ url_for('get_patient_tests' , patient_id = patient_id) }}">
+    <label for="patient_id">patient_id:</label>
+    <input type="text" id="patient_id" name="patient_id" value="patient_id"><br><br>
+    <input type="submit" value="get_patient_tests"/>
+</form>
+
+</html>

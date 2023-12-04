@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<h1>Inserts</h1>
+
+<p> create a new patient in database: </p>
+<form action="{{ url_for('add_new_patient') }}">
+    <label for="patient_id">patient_id:</label>
+    <input type="text" id="patient_id" name="patient_id" value="patient_id"><br>
+
+    <label for="name">name:</label>
+    <input type="text" id="name" name="name" value="name"><br>
+
+    <label for="gender">gender:</label>
+    <input type="text" id="gender" name="gender" value="gender"><br>
+
+    <label for="email">email:</label>
+    <input type="text" id="email" name="email" value="email"><br>
+
+    <label for="billing_address">billing_address:</label>
+    <input type="text" id="billing_address" name="billing_address" value="billing_address"><br>
+
+    <label for="zipcode">zipcode:</label>
+    <input type="text" id="zipcode" name="zipcode" value="zipcode"><br>
+
+    <label for="state">state:</label>
+    <input type="text" id="state" name="state" value="state"><br>
+
+    <label for="city">city:</label>
+    <input type="text" id="city" name="city" value="city"><br><br>
+
+    <input type="submit" value="add_new_patient"/>
+</form>
+
+<br><br>
+
+<p> create a new doctor in database: </p>
+<form action="{{ url_for('add_new_doctor') }}">
+    <label for="doctor_id">doctor_id:</label>
+    <input type="text" id="doctor_id" name="doctor_id" value="doctor_id"><br>
+
+    <label for="phone_number">phone_number:</label>
+    <input type="text" id="phone_number" name="phone_number" value="phone_number"><br>
+
+    <label for="work_address">work_address:</label>
+    <input type="text" id="work_address" name="work_address" value="work_address"><br>
+
+    <label for="work_zipcode">work_zipcode:</label>
+    <input type="text" id="work_zipcode" name="work_zipcode" value="work_zipcode"><br>
+
+    <label for="work_state">work_state:</label>
+    <input type="text" id="work_state" name="work_state" value="work_state"><br>
+
+    <label for="work_city">work_city:</label>
+    <input type="text" id="work_city" name="work_city" value="work_city"><br>
+
+    <input type="submit" value="add_new_doctor"/>
+</form>
+
+<br><br>
+
+<p> create a new test in database: </p>
+<form action="{{ url_for('add_new_test') }}">
+    <label for="test_id">test_id:</label>
+    <input type="text" id="test_id" name="test_id" value="test_id"><br>
+
+    <label for="patient_id">patient_id:</label>
+    <input type="text" id="patient_id" name="patient_id" value="patient_id"><br>
+
+    <label for="doctor_id">doctor_id:</label>
+    <input type="text" id="doctor_id" name="doctor_id" value="doctor_id"><br>
+
+    <label for="order_date">order_date:</label>
+    <input type="text" id="order_date" name="order_date" value="order_date"><br>
+
+    <input type="submit" value="add_new_test"/>
+</form>
+
+<br><br>
+
+<p> add test results when test processes: </p>
+<form action="{{ url_for('add_test_results') }}">
+    <label for="test_id">test_id:</label>
+    <input type="text" id="test_id" name="test_id" value="test_id"><br>
+
+    <label for="test_type">test_type:</label>
+    <input type="text" id="test_type" name="test_type" value="test_type"><br>
+
+    <label for="test_results">test_results:</label>
+    <input type="text" id="test_results" name="test_results" value="test_results"><br>
+
+    <input type="submit" value="add_test_results"/>
+</form>
+
+</html>
